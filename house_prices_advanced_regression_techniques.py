@@ -48,7 +48,7 @@ X2 = test_vet
 # creating submission dataframe
 submission = pd.DataFrame(index = test_vet.index)
 
-submission = pd.concat([submission, pd.DataFrame(lm.predict(X2)).round(2)],
+submission = pd.concat([submission, pd.DataFrame(lm.predict(X2), index = test_vet.index).round(2)],
                       axis = 1,
                       ignore_index = False)
 
